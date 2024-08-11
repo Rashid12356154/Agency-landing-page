@@ -1,0 +1,466 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --Soft-red: hsl(7, 99%, 70%);
+    --Yellow: hsl(51, 100%, 49%);
+    --Dark-desaturated-cyan: hsl(167, 40%, 24%);
+    --Dark-blue: hsl(198, 62%, 26%);
+    --Dark-moderate-cyan: hsl(168, 34%, 41%);
+    --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --Dark-grayish-blue: hsl(232, 10%, 55%);
+    --Grayish-blue: hsl(210, 4%, 67%);
+    --White: hsl(0, 0%, 100%);
+}
+@font-face {
+    font-family: Barlow;
+    src: url(https://fonts.google.com/specimen/Barlow);
+}
+@font-face {
+    font-family: Fraunces;
+    src: url(https://fonts.google.com/specimen/Fraunces);
+}
+body{
+ font-size: 18px;
+}
+.navbar{
+    background:url(images/mobile/image-header.jpg);
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    
+    
+}
+.navbar ul{
+    max-width: 380px;
+    margin: 0px auto;
+    overflow-y: hidden;
+    list-style: none;
+    background-color: var(--White);
+    text-align: center;
+    position: relative;
+ 
+}
+
+.navbar ul a{
+    width: 200px;
+    text-decoration: none;
+    padding: 15px 30px;
+    text-align: center;
+    color: var(--Grayish-blue);
+    font-weight: 600;
+    font-family: Barlow,sans-serif;
+    border-radius: 20px;
+}
+.navbar ul a:hover{
+    background-color: var(--Yellow);
+    color: var(--Very-dark-desaturated-blue);
+}
+.navbar ul li{
+    margin: 40px 0px;
+    padding: 15px 0px;
+    
+}
+.navbar .logo{
+   display: block;
+   float: left;
+   padding: 20px;
+}
+.navbar .menu{
+    clear: both;
+    max-height: 0;
+    transition: max-height .3s ease-in-out;
+}
+.navbar .check_btn{
+    position:relative;
+    float: right;
+    padding: 28px 20px;
+    cursor: pointer;
+}
+.navbar #check{
+    display:none;
+}
+.navbar #check:checked ~ .menu{
+    max-height: 380px;
+}
+header .hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/mobile/image-header.jpg);
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     display: grid;
+     place-items: center;
+}
+header .hero .content{
+    text-align: center;
+}
+header .hero .content h1{
+    font-size: 3.5rem;
+    width: 60%;
+    margin: 0px auto;
+    padding: 15px 0px;
+    color: var(--White);
+    font-family: Fraunce,sans-serif;
+}
+main{
+    width: 100%;
+}
+.container, 
+.container1{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0px;
+    padding: 0px;
+    gap: 0px;
+}
+.card_content{
+    display: grid;
+    place-items: center;
+    flex: 1;
+    width: 100%;
+    margin: 0px auto;
+    padding: 20px 0px;
+}
+ .card_content .card_body{
+    width: 70%;
+}
+ .card_content .card_body h1{
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    font-family: Barlow,sans-serif;
+}
+ .card_content .card_body p{
+    color: var(--Grayish-blue);
+    font-family: Fraunce,sans-serif;
+    padding: 20px 0px;
+    line-height: 25px;
+}
+ .card_content .card_body a{
+    text-decoration: none;
+    font-family: Barlow,sans-serif;
+    color: var(--Very-dark-desaturated-blue);
+    font-weight: 700;
+    
+}
+ .card_content .card_body .learn-btn1:hover{
+    border-bottom: 5px solid var(--Yellow);
+    border-radius: 3px;
+}
+ .card_content .card_body .learn-btn2:hover{
+    border-bottom: 5px solid var(--Soft-red);
+    border-radius: 3px;
+}
+ .card_image{
+    flex: 1;
+   overflow: hidden;
+}
+.container .card_image .image-transfor{
+    width: 100%;
+    height: 100%;
+    content: url(images/mobile/image-transform.jpg);
+    object-fit: cover;
+    object-position: center;
+}
+.container1 .card_image .image-outstande{
+    width: 100%;
+    height: 100%;
+    content: url(images/mobile/image-stand-out.jpg);
+    object-fit: cover;
+    object-position: center;
+}
+.ghraphic-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.ghraphic-container .ghraphic{
+    flex: 1;
+    position: relative;
+}
+.ghraphic-container .ghraphic .image{
+   
+    width: 100%;
+   content: url(images/mobile/image-graphic-design.jpg);
+  
+}
+.ghraphic-container .ghraphic .text {
+   bottom: 0px;
+    position: absolute;
+    margin: 0px auto;
+}
+.ghraphic-container .ghraphic .text h2{
+    color: var(--Dark-desaturated-cyan);
+    font-family: Barlow,sans-serif;
+    text-align: center;
+    padding: 25px 0px;
+    font-weight: 900;
+}
+.ghraphic-container .ghraphic .text p{
+    color: var(--Dark-desaturated-cyan);
+    font-family: Fraunce,sans-serif;
+    padding: 25px 20px;
+    line-height: 25px;
+    font-weight: 700;
+    text-align: center;
+}
+ .ghraphic-container .photography{
+    flex: 1;
+    position: relative;
+    
+ }
+.ghraphic-container .photography .image{
+    width: 100%;
+   content: url(images/mobile/image-photography.jpg);
+  
+}
+.ghraphic-container .photography .text {
+    bottom: 0px;
+    position: absolute;
+    margin: 0px auto;
+}
+.ghraphic-container .photography .text h2{
+    color:var(--Dark-blue);
+    font-family: Barlow,sans-serif;
+    text-align: center;
+    padding: 25px 0px;
+    font-weight: 900;
+}
+.ghraphic-container .photography .text p{
+    color: var(--Dark-blue);
+    font-family: Fraunce,sans-serif;
+    padding: 25px 20px;
+    line-height: 25px;
+    font-weight: 700;
+    text-align: center;
+}
+.testimonial{
+    padding: 20px 0px;
+}
+.testimonial h1{
+    text-align: center;
+    color: var(--Grayish-blue);
+    font-family: Barlow,sans-serif;
+    padding: 20px 0px;
+}
+.testimonial .grid{
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 20px;
+    justify-content: center;
+    margin: 0px auto;
+    padding: 20px 0px;
+}
+.testimonial .grid .profile{
+    text-align: center;
+    padding: 20px 0px;
+}
+.testimonial .grid .profile img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.testimonial .grid .profile p{
+    font-family: Fraunce,sans-serif;
+    color: var(--Very-dark-grayish-blue);
+    font-weight: 700;
+    line-height: 25px;
+    padding: 15px 0px;
+}
+.testimonial .grid .profile h2{
+    color: var(--Very-dark-desaturated-blue);
+    font-family: Fraunce,sans-serif;
+    font-size: 1.2rem;
+    padding: 15px 0px;
+}
+.testimonial .grid .profile h4{
+    color: var(--Grayish-blue);
+    font-size: 15px;
+    font-family: Fraunce,sans-serif;
+}
+footer{
+    width: 100%;
+    background-image: url(images/desktop/image-header.jpg);
+    padding-bottom: 15px;
+}
+.footer-navbar{
+     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0px;
+    margin: 0px auto;
+}
+.gallery{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}
+.gallery .bottle{
+    width: 100%;
+    content: url(images/mobile/image-gallery-milkbottles.jpg);
+}
+.gallery .orange{
+    width: 100%;
+    content: url(images/mobile/image-gallery-orange.jpg);
+}
+.gallery .cone{
+    width: 100%;
+    content: url(images/mobile/image-gallery-cone.jpg);
+}
+.gallery .sugar{
+   width: 100%;
+    content: url(images/mobile/image-gallery-sugar-cubes.jpg);
+}
+footer .footer-navbar .logo{
+    padding: 15px 0px;
+    margin: 0px auto;
+    text-align: center;
+}
+footer .footer-navbar .logo h1{
+    color: var(--Very-dark-desaturated-blue);
+    font-family: Barlow,sans-serif;
+}
+.footer-navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 25px 0px;
+}
+.footer-navbar ul li a{
+    text-decoration: none;
+    color: var(--Very-dark-desaturated-blue);
+    font-family: Fraunce,sans-serif;
+    font-weight: 700;
+
+}
+.footer-navbar ul li a:hover{
+    color: var(--White);
+}
+.footer-navbar .social{
+    padding: 35px 0px;
+    margin: 0px auto;
+    text-align: center;
+}
+.footer-navbar .social a{
+    text-decoration: none;
+    margin-left: 15px;
+}
+.footer-navbar .social a:hover{
+    color: var(--White);
+}
+@media(min-width:768px){
+    header .hero{
+        background-image: url(images/desktop/image-header.jpg);
+  
+    }
+    header .hero .content h1{
+        width: 100%;
+    }
+    header .hero .content img{
+        margin-bottom: 50px;
+    }
+    .navbar{
+        padding: 0px 25px;
+    }
+    .navbar li{
+        float: left;
+       
+        
+    }
+   
+    .navbar .menu{
+        clear: none;
+        float: right;
+        max-height: none;
+        background-color: transparent;
+        max-width: 100%;
+    }
+    .navbar ul li a{
+        color: var(--White);
+        margin-right: 15px;
+    }
+    .navbar ul li{
+        padding: 20px 0px;
+        margin: 0px;
+    }
+    .navbar .check_btn{
+        display: none;
+    }
+    .navbar .active{
+        background-color: var(--White);
+        color: var(--Very-dark-desaturated-blue);
+    }
+    .navbar ul li a:hover{
+        background-color: var(--Dark-desaturated-cyan);
+        color: var(--White);
+    }
+    .container{
+        flex-direction: row;
+    }
+    .container1{
+        flex-direction: row-reverse;
+    }
+    .container .card_image .image-transfor{
+        content: url(images/desktop/image-transform.jpg);
+    }
+    .container1 .card_image .image-outstande{
+        content: url(images/desktop/image-stand-out.jpg);
+    }
+    .ghraphic-container{
+        width: 100%;
+        flex-direction: row;
+    }
+    .ghraphic-container .ghraphic .image{
+        content: url(images/desktop/image-graphic-design.jpg);
+    }
+    .ghraphic-container .photography .image{
+        content: url(images/desktop/image-photography.jpg);
+    }
+    .text{
+        width: 70%;
+        margin: 0px auto;
+        text-align: center;
+        left: 110px;
+        bottom: 10px;
+        
+    }
+    .gallery .bottle{
+        width: 100%;
+        content: url(images/desktop/image-gallery-milkbottles.jpg);
+    }
+    .gallery .orange{
+        width: 100%;
+        content: url(images/desktop/image-gallery-orange.jpg);
+    }
+    .gallery .cone{
+        width: 100%;
+        content: url(images/desktop/image-gallery-cone.jpg);
+    }
+    .gallery .sugar{
+        width: 100%;
+        content: url(images/desktop/image-gallery-sugarcubes.jpg);
+    }
+}
+@media(max-width:980px){
+    .text{
+        width: 100%;
+       left: 0px;
+    }
+    .text h2{
+        padding: 0px;
+        font-size: 1.3rem;
+    }
+    .text p{
+        padding: 5px 0px;
+        font-family: 15px;
+    }
+}
